@@ -1,9 +1,10 @@
 \usepackage{mathtools, amssymb}
 \usepackage{amsthm}
 \usepackage{tikz} % use TikZ package.
+\usepackage{cd} % commutative diagram
 \usepackage{docmute}
 \usepackage{mathrsfs}
-\usepackage{mathpartir}
+\usepackage{mathpartir} % inference rules
 
 %%% FONT %%%
 %\usepackage{sfmath} % sans serif
@@ -27,13 +28,15 @@
 \newcommand\Id{\operatorname{Id}}
 \newcommand\id{\operatorname{id}}
 \newcommand*\from{\colon}
+\newcommand*\too{\xrightarrow}
+\newcommand*\oot{\xlefttarrow}
 \newcommand*\To{\Rightarrow}
+\newcommand*\oT{\Leftarrow}
 \newcommand*\implie{\rightarrow}
-\renewcommand\proofname{\bf 証明}
 \renewcommand{\labelitemi}{・}
 
 
-%%%%
+%%% 日本語
 \theoremstyle{definition}
 \newtheorem{theorem}{定理}
 \newtheorem{prop}[theorem]{命題}
@@ -43,6 +46,19 @@
 \newtheorem{definition}[theorem]{定義}
 \newtheorem{rem}[theorem]{注意}
 \newtheorem{guide}[theorem]{参考}
+\renewcommand\proofname{\bf 証明}
+
+%%% English
+%\theoremstyle{definition}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{prop}[theorem]{Proposition}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{cor}[theorem]{Corollary}
+%\newtheorem{example}[theorem]{Example}
+%\newtheorem{definition}[theorem]{Definition}
+%\newtheorem{rem}[theorem]{Remark}
+%\newtheorem{guide}[theorem]{Guide}
+%\renewcommand\proofname{\bf Proof}
 
 
 \numberwithin{theorem}{section}
