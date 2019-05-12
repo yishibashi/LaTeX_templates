@@ -1,0 +1,75 @@
+\usepackage{mathtools, amssymb}
+\usepackage{amsthm}
+\usepackage{tikz} % use TikZ package.
+%\usepackage{cd} % commutative diagram
+\usepackage{docmute}
+\usepackage{mathrsfs}
+\usepackage{mathpartir} % inference rules
+
+%%% THEME %%%
+\usetheme{metropolis}           % Use metropolis theme
+  %%% theme setting %%%
+    %%% metropolis theme
+    \metroset{block=fill}
+
+%%% FONT %%%
+%\usepackage{sfmath} % sans serif
+
+%%% PAGE %%%
+%\pagestyle{empty} % show page number or not.
+
+%%% SYMBOLS %%%
+\newcommand{\Lmeet}{\mathrel{\text{{\scalebox{0.8}{$\wedge$}}}}}
+\newcommand{\Ljoin}{\mathrel{\text{{\scalebox{0.8}{$\vee$}}}}}
+\newcommand\Hom{\operatorname{Hom}}
+\newcommand\Clop{\operatorname{Clop}}
+\newcommand\Spec{\operatorname{Spec}}
+\newcommand\dom{\operatorname{dom}}
+\newcommand\cod{\operatorname{cod}}
+\newcommand\Ob{\operatorname{Ob}}
+\newcommand\Arr{\operatorname{Arr}}
+\newcommand\Mor{\operatorname{Mor}}
+\newcommand\Ker{\operatorname{Ker}}
+\newcommand\Img{\operatorname{Img}}
+\newcommand\Id{\operatorname{Id}}
+\newcommand\id{\operatorname{id}}
+\newcommand*\from{\colon}
+\newcommand*\too{\xrightarrow}
+\newcommand*\oot{\xlefttarrow}
+\newcommand*\To{\Rightarrow}
+\newcommand*\oT{\Leftarrow}
+\newcommand*\implie{\rightarrow}
+%\renewcommand{\labelitemi}{・}
+
+
+%%% 日本語
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{prop}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{cor}[theorem]{系}
+\newtheorem{example}[theorem]{例}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{rem}[theorem]{注意}
+\newtheorem{guide}[theorem]{参考}
+\renewcommand\proofname{\bf 証明}
+
+%%% English
+%\theoremstyle{definition}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{prop}[theorem]{Proposition}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{cor}[theorem]{Corollary}
+%\newtheorem{example}[theorem]{Example}
+%\newtheorem{definition}[theorem]{Definition}
+%\newtheorem{rem}[theorem]{Remark}
+%\newtheorem{guide}[theorem]{Guide}
+%\renewcommand\proofname{\bf Proof}
+
+
+\numberwithin{theorem}{section}
+\numberwithin{equation}{section}
+
+\newtheorem*{theorem*}{定理}
+\newtheorem*{definition*}{定義}
+
