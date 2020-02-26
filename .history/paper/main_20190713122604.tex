@@ -3,11 +3,12 @@
 \usepackage{docmute}
 \input{config}
 
+
+\begin{document}
+
 \title{TITLE}
 \author{AUTHOR}
 \date{\today}
-
-\begin{document}
 
 \maketitle\thispagestyle{empty}
 
@@ -16,7 +17,9 @@
 \clearpage
 \addtocounter{page}{-1}
 
-
 \input{src/01.tex}
+\input{src/bib.tex}
+
+\newpage
 
 \end{document}
