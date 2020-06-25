@@ -4,8 +4,11 @@
 
 \begin{document}
 
-\section{01}
+\section{tikzcd examples}
 
-\href{https://www.google.com}{Google}
+\begin{tikzcd}
+    A \arrow[rr, "f"{name=f}, bend left] \arrow[rr, "g"'{name=g},bend right] & & B
+    \arrow[Rightarrow, "\alpha", shorten=3pt, from=f, to=g]
+\end{tikzcd}
 
 \end{document}

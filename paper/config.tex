@@ -1,11 +1,30 @@
-\usepackage{mathtools, amssymb}
-\usepackage{amsthm}
-\usepackage{amssymb}
+%\usepackage[backend=biber, style=alphabetic-verb]{biblatex}
+%\usepackage[backend=bibtex, style=alphabetic-verb]{biblatex}
+
+\usepackage{amsthm, amssymb}
+\usepackage{mathtools}
+
+%%%  TikZ, Diagrams %%%
 \usepackage{tikz} % use TikZ package.
-    \usetikzlibrary{cd} % commutative diagram
-\usepackage{docmute}
-\usepackage{mathrsfs}
-\usepackage{mathpartir} % inference rules
+\usetikzlibrary{cd} % commutative diagram
+
+%%% 
+\usepackage{mathrsfs} % Support for using RSFS fonts in maths. 
+\usepackage[mathscr]{eucal} % mathscr or mathcal or e.t.c.
+
+%%% Inference rules %%%
+\usepackage{mathpartir}
+
+%%%
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems, skins}
+
+%%% Bold & Blackboard bold font %%%
+\usepackage{bm}
+%% blackboard bold capital Delta with Euler fonts.
+\usepackage[bbgreekl]{mathbbol}
+\usepackage{bbm}
+\DeclareMathSymbol\bbDelta  \mathord{bbold}{"01}
 
 %%% FONT %%%
 %\usepackage{sfmath} % sans serif
@@ -14,9 +33,11 @@
 %\pagestyle{empty} % show page number or not.
 
 %%% SYMBOLS %%%
+
 \newcommand{\Lmeet}{\mathrel{\text{{\scalebox{0.8}{$\wedge$}}}}}
 \newcommand{\Ljoin}{\mathrel{\text{{\scalebox{0.8}{$\vee$}}}}}
 \newcommand\Hom{\operatorname{Hom}}
+\newcommand\Fun{\operatorname{Fun}}
 \newcommand\Clop{\operatorname{Clop}}
 \newcommand\Spec{\operatorname{Spec}}
 \newcommand\dom{\operatorname{dom}}
@@ -29,42 +50,81 @@
 \newcommand\Id{\operatorname{Id}}
 \newcommand\id{\operatorname{id}}
 \newcommand*\from{\colon}
+\newcommand*\inclusion{\xhookrightarrow}
 \newcommand*\too{\xrightarrow}
 \newcommand*\oot{\xlefttarrow}
 \newcommand*\To{\Rightarrow}
 \newcommand*\oT{\Leftarrow}
+\newcommand*\isofib{\twoheadrightarrow}
 \newcommand*\implie{\rightarrow}
 \renewcommand{\labelitemi}{・}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbbm{N}}
+\newcommand{\Z}{\mathbbm{Z}}
+\newcommand{\Q}{\mathbbm{Q}}
+\newcommand{\R}{\mathbbm{R}}
+\newcommand{\C}{\mathbbm{C}}
+\newcommand{\invprod}{\mathbin{\text{\rotatebox[origin=c]{180}{$\prod$}}}}
 
+\newcommand{\End}{\int}
+\newcommand{\Coend}{\int}
+\newcommand{\Lan}{\operatorname{Lan}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ho}{\operatorname{Ho}}
+\newcommand{\h}{\mathfrak{h}}
+%\newcommand{\h}{\operatorname{h}}
+
+\newcommand{\cat}{\mathbf}
+\newcommand{\Cat}{\mathcal}
+\newcommand{\CAT}{\mathscr}
+\newcommand{\adjointl}{\dashv}
+\newcommand{\adjointr}{\vdash}
+
+
+\newcommand{\simp}{\bbDelta}
+\newcommand{\boundary}{\partial}
+\newcommand{\Yo}{\text{よ}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\sSet}{\mathbf{sSet}}
+\newcommand{\msSet}{\mathbf{msSet}}
+\newcommand{\sCat}{\mathbf{sCat}}
+\newcommand{\qCat}{\mathbf{qCat}}
+\newcommand{\sAb}{\mathbf{sAb}}
+\newcommand{\op}{\text{op}}
+\newcommand{\colim}{\text{colim}}
+\newcommand{\holim}{\text{holim}}
+\newcommand{\hocolim}{\text{hocolim}}
+
+\newcommand*\dinat{\xrightarrow{\cdot \cdot }}
+\newcommand*\rprofunctor{\rightsquigarrow}
+
+
+%%% THEOREMSTYLE %%%
 
 %%% 日本語
-\theoremstyle{definition}
-\newtheorem{theorem}{定理}
-\newtheorem{prop}[theorem]{命題}
-\newtheorem{lemma}[theorem]{補題}
-\newtheorem{cor}[theorem]{系}
-\newtheorem{example}[theorem]{例}
-\newtheorem{definition}[theorem]{定義}
-\newtheorem{rem}[theorem]{注意}
-\newtheorem{guide}[theorem]{参考}
-\renewcommand\proofname{\bf 証明}
-
-%%% English
 %\theoremstyle{definition}
-%\newtheorem{theorem}{Theorem}
-%\newtheorem{prop}[theorem]{Proposition}
-%\newtheorem{lemma}[theorem]{Lemma}
-%\newtheorem{cor}[theorem]{Corollary}
-%\newtheorem{example}[theorem]{Example}
-%\newtheorem{definition}[theorem]{Definition}
-%\newtheorem{rem}[theorem]{Remark}
-%\newtheorem{guide}[theorem]{Guide}
-%\renewcommand\proofname{\bf Proof}
+%\newtheorem{theorem}{定理}
+%\newtheorem{prop}[theorem]{命題}
+%\newtheorem{lemma}[theorem]{補題}
+%\newtheorem{cor}[theorem]{系}
+%\newtheorem{example}[theorem]{例}
+%\newtheorem{definition}[theorem]{定義}
+%\newtheorem{rem}[theorem]{注意}
+%\newtheorem{guide}[theorem]{参考}
+%\renewcommand\proofname{\bf 証明}
+
+%% English
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{rem}[theorem]{Remark}
+\newtheorem{guide}[theorem]{Guide}
+\newtheorem{notation}[theorem]{Notaion}
+\renewcommand\proofname{\bf Proof}
 
 
 \numberwithin{theorem}{section}
@@ -72,4 +132,3 @@
 
 \newtheorem*{theorem*}{定理}
 \newtheorem*{definition*}{定義}
-
