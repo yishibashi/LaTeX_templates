@@ -11,4 +11,25 @@
     \arrow[Rightarrow, "\alpha", shorten=3pt, from=f, to=g]
 \end{tikzcd}
 
+% beamer では [ampersand replacement=\&] と tikzcd中の & を \& に変更
+
+% composition law
+\begin{tikzcd}[ampersand replacement=\&]
+    X \arrow[r, "f"] \arrow[rr, "g \circ f"', bend left=49] \arrow[rrr, "(h \circ g) \circ f"', bend right=60] \arrow[rrr, "h \circ (g \circ f)", bend left=60] \& Y \arrow[r, "g"] \arrow[rr, "h \circ g", bend right=49] \& Z \arrow[r, "h"] \& W
+\end{tikzcd}
+% identitiy law
+\begin{tikzcd}[ampersand replacement=\&]
+    X \arrow[d, "\text{id}"'] \arrow[r, "f"] \& Y \\
+    X \arrow[ru, "f"']                       \&
+\end{tikzcd}
+
+% adjoint
+\begin{tikzcd}
+    & |[alias=B_left]|B   \arrow[rr, equal, ""{name=dom_eta}]  \arrow[rdd, "f"] &                     & B & B                                                         &  & B \arrow[rdd, "f"'] \arrow[rr, equal, ""{name=cod_eta2}]  &                               & |[alias=B_right]|B \arrow[rdd, "f"]  &                                                                                      & B \arrow[dd, "f"', bend right, ""{name=f_right}] \arrow[dd, "f", bend left, ""{name=f_left}] \arrow[Rightarrow, xshift=-1mm, shorten=1mm, from=f_left, to=f_right,  "\text{id}_{f}"] \\
+    &                           &                     & = &                                                           & &                                &                              &                    & = &                                                           \\
+    A \arrow[ruu, "u"]  \arrow[rr, equal, ""{name=cod_eps}] \arrow[Rightarrow, shorten=8pt, from=B_left, to=cod_eps, "\epsilon"] &              & A \arrow[Rightarrow, shorten=8pt, from=dom_eta, "\eta"] \arrow[ruu, "u"'] &  & A \arrow[uu, "u"', bend right, ""{name=u_right}] \arrow[uu, "u", bend left, ""{name=u_left}] \arrow[Rightarrow, xshift=1mm , shorten=1mm, from=u_left, to=u_right, "\text{id}_{u}"] & &                               & A \arrow[Rightarrow, shorten=8pt, from=cod_eta2, "\eta"] \arrow[rr, equal, ""{name=cod_eps2}] \arrow[Rightarrow, shorten=8pt, from=B_right, to=cod_eps2, "\epsilon"] \arrow[ruu, "u"] &                    & A & A
+\end{tikzcd}
+
+
+
 \end{document}
