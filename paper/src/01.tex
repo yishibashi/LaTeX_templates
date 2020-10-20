@@ -30,6 +30,15 @@
     A \arrow[ruu, "u"]  \arrow[rr, equal, ""{name=cod_eps}] \arrow[Rightarrow, shorten=8pt, from=B_left, to=cod_eps, "\epsilon"] &              & A \arrow[Rightarrow, shorten=8pt, from=dom_eta, "\eta"] \arrow[ruu, "u"'] &  & A \arrow[uu, "u"', bend right, ""{name=u_right}] \arrow[uu, "u", bend left, ""{name=u_left}] \arrow[Rightarrow, xshift=1mm , shorten=1mm, from=u_left, to=u_right, "\text{id}_{u}"] & &                               & A \arrow[Rightarrow, shorten=8pt, from=cod_eta2, "\eta"] \arrow[rr, equal, ""{name=cod_eps2}] \arrow[Rightarrow, shorten=8pt, from=B_right, to=cod_eps2, "\epsilon"] \arrow[ruu, "u"] &                    & A & A
 \end{tikzcd}
 
+\begin{tikzcd}
+    D \arrow[r, shift left=1ex, "G"{name=G}] & C \arrow[l, shift left=.5ex, "F"{name=F}]
+    \arrow[phantom, from=F, to=G, , "\scriptscriptstyle\boldsymbol{\top}"].
+\end{tikzcd}
 
+\begin{tikzcd}
+    E_1 \arrow[dd, "p_1"'] \arrow[rr, "\text{cod}"] \arrow[ddrr, phantom, "\scalebox{1.5}{$\lrcorner$}", very near start]  &  & E_0 \arrow[dd, "p_0"] \\
+    &  &                       \\
+    B_1 \arrow[rr, "\text{cod}"']                   &  & B_0
+\end{tikzcd}
 
 \end{document}
